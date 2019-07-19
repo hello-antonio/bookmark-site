@@ -1,0 +1,37 @@
+// _globals.scss
+
+$ratio: 1.5;
+$leading: $ratio;
+$spacing: $ratio+rem;
+$base: 18;
+
+
+// Colours
+
+$soft-blue: #5267df;
+$dark-blue: darken($soft-blue, 10);
+$light-blue: lighten($soft-blue, 10);
+$soft-red: #f95656;
+$dark-red: darken($soft-red, 10);
+$light-red: lighten($soft-red, 10);
+
+$grayish-blue: #9093a1;
+$very-dark-blue: #242b46;
+$light-gray: #f7f7f7;
+
+// Fonts
+
+$display-font: "Rubik";
+$regular: 400;
+$medium: 500;
+
+// Spacing
+
+$space-s: 0.5rem;
+$space-m: 0.75rem;
+$space-l: 1rem;
+$space-xl: 1.5rem;
+$space-xxl: 3rem;
+
+// Container
+$max-width: 1120px;
