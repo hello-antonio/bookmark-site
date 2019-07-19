@@ -16,8 +16,12 @@ $version: 1;
 // main.scss - output file that brings together all of the above parts
 
 // UTILS
+@import "./globals";
+@import "./functions";
+@import "./mixins";
 
 // BASE
+@import "./reset";
 
 // LAYOUT
 

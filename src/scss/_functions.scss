@@ -1,0 +1,24 @@
+// _functions.scss
+
+// EM/REM Helpers
+
+@function px2root($target, $context) {
+    $result: $target;
+    $this-base: $base * 1px;
+
+
+    @if unitless($result) {
+        @return (($result * 1px) / $this-base);
+    }
+
+    @return ($result / $this-base);
+}
+
+@function em($target, $context: $base) {
+    @return (px2root($target, $context)) * 1em;
+
+}
+
+@function rem($target, $context: $base) {
+    @return (px2root($target, $context)) * 1rem;
+}
