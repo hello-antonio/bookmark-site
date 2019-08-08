@@ -1,0 +1,63 @@
+// _page.scss
+.section {
+    &__header {
+        text-align: center;
+        width: 100%;
+        max-width: rem(600);
+        margin: auto;
+    }
+}
+
+// Cards
+.cards {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    width: 100%;
+    margin: auto;
+
+    @media (min-width: 1000px) {
+        width: 84%;
+    }
+}
+
+.card {
+    display: inline-block;
+    margin: 1.5rem auto;
+    border-radius: 4%;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba($very-dark-blue, .1);
+
+    &__info {
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    @media (min-width:768px) {
+        margin: 0 1.5rem 1.5rem 0;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+// CTA
+.cta {
+    background-color: $soft-blue;
+    color: #fff;
+
+    h2 {
+        color: inherit;
+    }
+}
+
+// Footer
+.footer {
+    background-color: $very-dark-blue;
+    color: #fff;
+
+    a {
+        color: inherit;
+    }
+}

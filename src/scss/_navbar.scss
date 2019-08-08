@@ -73,7 +73,12 @@
     a {
         text-transform: uppercase;
         letter-spacing: 1px;
+
+        &:not(.btn):hover {
+            color: $soft-red;
+        }
     }
+
 }
 
 // js 

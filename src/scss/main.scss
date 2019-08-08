@@ -22,6 +22,7 @@ $version: 1;
 
 // BASE
 @import "./reset";
+@import "./typography";
 
 // LAYOUT
 @import "./layout";
@@ -31,6 +32,7 @@ $version: 1;
 @import "./navbar";
 
 // PAGES
+@import "./page";
 
 // THEMES
 

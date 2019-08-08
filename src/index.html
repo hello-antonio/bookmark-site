@@ -190,6 +190,7 @@
                             <img src="./images/logo-chrome.svg" alt="Chrome">
                             <h3>
                                 Add to Chrome
+                                <br>
                                 Minimum version 62
                             </h3>
                         </div>
@@ -203,6 +204,7 @@
                             <img src="./images/logo-firefox.svg" alt="Firefox">
                             <h3>
                                 Add to Firefox
+                                <br>
                                 Minimum version 55
                             </h3>
                         </div>
@@ -216,6 +218,7 @@
                             <img src="./images/logo-opera.svg" alt="Opera">
                             <h3>
                                 Add to Opera
+                                <br>
                                 Minimum version 46
                             </h3>
                         </div>
@@ -336,7 +339,7 @@
     <!-- CTA -->
     <section id="cta" class="section cta">
         <div class="container">
-            <form class="cta">
+            <form class="cta__form">
                 <fieldset>
                     <legend>
                         <span>
@@ -360,44 +363,47 @@
     </section>
     <!-- FOOTER -->
     <footer class="footer">
-        <ul class="container links">
-            <li><a href="#homepage" aria-label="Bookmark">
-                    <svg class="icon logo-bookmark-footer">
-                        <use xlink:href="#logo-bookmark"></use>
-                    </svg>
-                </a></li>
-            <li>
-                <ul>
-                    <li><a href="#">
-                            Features
-                        </a></li>
-                    <li><a href="#">
-                            Pricing
-                        </a></li>
-                    <li><a href="#">
-                            Contact
-                        </a></li>
-                </ul>
-            </li>
-            <li>
-                <ul>
-                    <li>
-                        <a role="menuitem" href="#" aria-label="Facebook">
-                            <svg class="icon icon-facebook">
-                                <use xlink:href="#icon-facebook"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a role="menuitem" href="#" aria-label="Twitter">
-                            <svg class="icon icon-twitter">
-                                <use xlink:href="#icon-twitter"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
+        <div class="container">
+
+            <ul class="links">
+                <li><a href="#homepage" aria-label="Bookmark">
+                        <svg class="icon logo-bookmark-footer">
+                            <use xlink:href="#logo-bookmark"></use>
+                        </svg>
+                    </a></li>
+                <li>
+                    <ul>
+                        <li><a href="#">
+                                Features
+                            </a></li>
+                        <li><a href="#">
+                                Pricing
+                            </a></li>
+                        <li><a href="#">
+                                Contact
+                            </a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li>
+                            <a role="menuitem" href="#" aria-label="Facebook">
+                                <svg class="icon icon-facebook">
+                                    <use xlink:href="#icon-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a role="menuitem" href="#" aria-label="Twitter">
+                                <svg class="icon icon-twitter">
+                                    <use xlink:href="#icon-twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
         <p class="attribution">
             Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
             Coded by <a href="#">Your Name Here</a>.
@@ -420,7 +426,7 @@
             </symbol>
             <symbol id="icon-twitter" viewBox="0 0 38 32">
                 <title>icon-twitter</title>
-                <path fill="#fff" style="fill: var(--color3, #fff)"
+                <path fill="currentColor" style="fill: var(--color3, currentColor)"
                     d="M38.4 4.091c-1.318 0.6-2.846 1.037-4.449 1.232l-0.076 0.008c1.63-0.986 2.855-2.501 3.448-4.303l0.016-0.056c-1.44 0.87-3.116 1.533-4.902 1.895l-0.101 0.017c-1.439-1.533-3.478-2.488-5.74-2.488-0.004 0-0.007 0-0.011 0h0.001c-5.086 0-8.824 4.746-7.675 9.672-6.562-0.338-12.335-3.457-16.205-8.19l-0.032-0.040c-0.671 1.135-1.067 2.502-1.067 3.961 0 2.722 1.379 5.122 3.476 6.539l0.028 0.018c-1.316-0.043-2.538-0.403-3.606-1.006l0.039 0.020c-0.086 3.65 2.53 7.064 6.318 7.824-0.621 0.175-1.333 0.276-2.070 0.276-0.527 0-1.041-0.052-1.539-0.15l0.050 0.008c1.037 3.155 3.927 5.405 7.352 5.47l0.008 0c-2.664 2.105-6.072 3.377-9.776 3.377-0.665 0-1.321-0.041-1.965-0.121l0.077 0.008c3.408 2.219 7.578 3.539 12.056 3.539 0.007 0 0.014 0 0.022 0h-0.001c14.627 0 22.891-12.354 22.392-23.434 1.548-1.128 2.852-2.479 3.895-4.022l0.036-0.057z">
                 </path>
             </symbol>
@@ -430,7 +436,7 @@
             </symbol>
             <symbol id="icon-facebook" viewBox="0 0 32 32">
                 <title>icon-facebook</title>
-                <path fill="#fff" style="fill: var(--color3, #fff)"
+                <path fill="currentColor" style="fill: var(--color3, currentColor)"
                     d="M30.233 0h-28.467c-0.976 0-1.767 0.791-1.767 1.767v28.468c0 0.975 0.791 1.765 1.767 1.765h15.327v-12.392h-4.171v-4.829h4.171v-3.561c0-4.133 2.524-6.384 6.212-6.384 1.767 0 3.284 0.132 3.727 0.191v4.32l-2.557 0.001c-2.005 0-2.393 0.953-2.393 2.351v3.084h4.783l-0.623 4.829h-4.16v12.391h8.155c0.973 0 1.764-0.791 1.764-1.767v-28.467c0-0.976-0.791-1.767-1.767-1.767z">
                 </path>
             </symbol>
