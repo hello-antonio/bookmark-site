@@ -34,22 +34,42 @@
   }
   ========================================== */
 
-.icon-logo-bookmark {
+.logo-bookmark {
     width: 5.919921875em;
 }
 
-.icon-icon-twitter {
+// color1: logo, color2: logo, color3: text/icon  
+
+.logo-bookmark-footer {
+    @extend .logo-bookmark;
+
+    @include icon-colors() {
+        --color1: #fff;
+    }
+}
+
+.logo-bookmark-white {
+    @extend .logo-bookmark;
+
+    @include icon-colors() {
+        --color1: #fff;
+        --color2: #fff;
+        --color3: #{$very-dark-blue};
+    }
+}
+
+.icon-twitter {
     width: 1.2001953125em;
 }
 
-.icon-icon-hamburger {
+.icon-hamburger {
     width: 1.2001953125em;
 }
 
-.icon-icon-close {
+.icon-close {
     width: 1.06640625em;
 }
 
-.icon-icon-arrow {
+.icon-arrow {
     width: 1.5em;
 }
