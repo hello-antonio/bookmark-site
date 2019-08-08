@@ -1,0 +1,135 @@
+// _navbar.scss
+.navbar {
+    &__toggle {
+        display: none;
+    }
+
+    &__menu {
+        a {
+            font-size: 1rem;
+        }
+
+        a:not(.btn) {
+            padding: 0.5rem 0;
+            color: $soft-blue;
+        }
+
+        a.btn {
+            padding: 0.5rem 0.75rem;
+        }
+
+        .icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            --color3: #{$soft-blue};
+        }
+
+        li {
+            margin: 0.5rem 0;
+        }
+
+        li ul li {
+            display: inline-block;
+
+            &:first-child {
+                margin: 0 1rem 0 0;
+            }
+        }
+    }
+
+    @media (min-width:768px) {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        &__mobile-visible {
+            display: none !important;
+            visibility: hidden;
+        }
+
+        &__menu {
+            a {
+                font-size: 0.75rem;
+            }
+
+            li {
+                display: inline-block;
+                margin: 0 3rem 0 0;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &:nth-last-child(2) {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+.links {
+    a {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+}
+
+// js 
+.js {
+
+    @media (max-width: 767px) {
+        .navbar {
+            min-height: 70px;
+
+            &__title,
+            &__toggle {
+                display: inline-block;
+                width: 49%;
+            }
+
+            &__toggle {
+                text-align: right;
+
+                button {
+                    border: none;
+                    background-color: transparent;
+                    vertical-align: middle;
+                }
+
+                .icon__hamburger {
+                    opacity: 1;
+                }
+
+                .icon__close {
+                    opacity: 0;
+                }
+            }
+
+            &__menu {
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: 1.5rem 0;
+                padding: 1.5rem 8%;
+                width: 100%;
+                transform: translateY(-200%);
+                background-color: $very-dark-blue;
+                text-align: center;
+                transition: transform 500ms ease-in-out;
+
+                a {
+                    width: 100%;
+                    color: #fff;
+                    padding: 0.75rem;
+                }
+
+                .icon {
+                    font-size: 1.5rem;
+                    --color3: #{$soft-red}
+                }
+            }
+        }
+    }
+}

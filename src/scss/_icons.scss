@@ -1,8 +1,8 @@
 // _icons.scss
 .icon {
     display: inline-block;
-    width: 1em;
-    height: 1em;
+    width: 1rem;
+    height: 1rem;
     stroke-width: 0;
     stroke: currentColor;
     fill: currentColor;
@@ -13,32 +13,11 @@
     @content;
 }
 
-// .cup {
-//     @include icon-colors() {
-//       --cup-color: red;
-//       --smoke-color: grey;
-//     };
-//   }
-
-//   .cup-alt {
-//     @include icon-colors(green) {
-//       --cup-color: green;
-//       --smoke-color: grey;
-//     };
-//   }
-/* ==========================================
-  Single-colored icons can be modified like so:
-  .icon-name {
-    font-size: 32px;
-    color: red;
-  }
-  ========================================== */
-
 .logo-bookmark {
-    width: 5.919921875em;
+    width: 7rem;
+    height: 1.5rem;
+    vertical-align: middle;
 }
-
-// color1: logo, color2: logo, color3: text/icon  
 
 .logo-bookmark-footer {
     @extend .logo-bookmark;
@@ -59,11 +38,11 @@
 }
 
 .icon-twitter {
-    width: 1.2001953125em;
+    width: 1.2001953125rem;
 }
 
 .icon-hamburger {
-    width: 1.2001953125em;
+    width: 1.2001953125rem;
 }
 
 .icon-close {
@@ -71,5 +50,5 @@
 }
 
 .icon-arrow {
-    width: 1.5em;
+    width: 1.5rem;
 }

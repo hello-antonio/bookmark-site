@@ -7,6 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Web Starter">
     <title>Web Starter</title>
+    <script>
+        (function () {
+            document.getElementsByTagName("html")[0].classList.add("js")
+        })();
+    </script>
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap" rel="preload" as="style"
         onload="this.rel = 'stylesheet'">
@@ -36,13 +41,13 @@
             <div class="navbar__toggle">
                 <button aria-label="Open Menu">
                     <svg class="icon">
-                        <use xlink:href="#icon-hamburger"></use>
-                        <use xlink:href="#icon-close"></use>
+                        <use xlink:href="#icon-hamburger" class="icon__hamburger"></use>
+                        <use xlink:href="#icon-close" class="icon__close"></use>
                     </svg>
                 </button>
             </div>
             <!-- MENU -->
-            <ul class="navbar__menu" role="menu">
+            <ul class="navbar__menu links" role="menu">
                 <li role="none"><a role="menuitem" href="#">
                         Features
                     </a></li>
@@ -52,21 +57,21 @@
                 <li role="none"><a role="menuitem" href="#">
                         Contact
                     </a></li>
-                <li role="none"><a role="menuitem" href="#">
+                <li role="none"><a class="btn" role="menuitem" href="#">
                         Login
                     </a></li>
                 <li class="navbar__mobile-visible" role="none">
                     <ul>
                         <li>
                             <a role="menuitem" href="#" aria-label="Facebook">
-                                <svg class="icon">
+                                <svg class="icon icon-facebook">
                                     <use xlink:href="#icon-facebook"></use>
                                 </svg>
                             </a>
                         </li>
                         <li>
                             <a role="menuitem" href="#" aria-label="Twitter">
-                                <svg class="icon">
+                                <svg class="icon icon-twitter">
                                     <use xlink:href="#icon-twitter"></use>
                                 </svg>
                             </a>
@@ -80,6 +85,7 @@
         <div class="container">
             <!-- HOME -->
             <section id="homepage">
+                <img src="./images/illustration-hero.svg" alt="illustration-hero" aria-hidden="true">
                 <div>
                     <h1>
                         A Simple Bookmark Manager
@@ -221,7 +227,7 @@
                 </ul>
             </section>
             <!-- FAQ -->
-            <section id="faq">
+            <section id="faq" class="section">
                 <div class="section__header">
                     <h2>
                         Frequently Asked Questions
@@ -326,35 +332,35 @@
                 </div>
             </section>
         </div>
-        <!-- CTA -->
-        <section id="cta" class="section cta">
-            <div class="container">
-                <form class="cta">
-                    <fieldset>
-                        <legend>
-                            <span>
-                                35,000+ already joined
-                            </span>
-                            <h2>
-                                Stay up-to-date with what we’re doing
-                            </h2>
-                        </legend>
-
-                        <div class="cta__group">
-                            <label for="email">
-                                Email
-                            </label>
-                            <input type="email" id="email" placeholder="Enter your email">
-                            <input type="submit" value="Contact Us">
-                        </div>
-                    </fieldset>
-                </form>
-            </div>
-        </section>
     </main>
+    <!-- CTA -->
+    <section id="cta" class="section cta">
+        <div class="container">
+            <form class="cta">
+                <fieldset>
+                    <legend>
+                        <span>
+                            35,000+ already joined
+                        </span>
+                        <h2>
+                            Stay up-to-date with what we’re doing
+                        </h2>
+                    </legend>
+
+                    <div class="cta__group">
+                        <label for="email">
+                            Email
+                        </label>
+                        <input type="email" id="email" placeholder="Enter your email">
+                        <input type="submit" value="Contact Us">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </section>
     <!-- FOOTER -->
     <footer class="footer">
-        <ul class="container">
+        <ul class="container links">
             <li><a href="#homepage" aria-label="Bookmark">
                     <svg class="icon logo-bookmark-footer">
                         <use xlink:href="#logo-bookmark"></use>
@@ -377,14 +383,14 @@
                 <ul>
                     <li>
                         <a role="menuitem" href="#" aria-label="Facebook">
-                            <svg class="icon">
+                            <svg class="icon icon-facebook">
                                 <use xlink:href="#icon-facebook"></use>
                             </svg>
                         </a>
                     </li>
                     <li>
                         <a role="menuitem" href="#" aria-label="Twitter">
-                            <svg class="icon">
+                            <svg class="icon icon-twitter">
                                 <use xlink:href="#icon-twitter"></use>
                             </svg>
                         </a>
