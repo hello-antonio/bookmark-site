@@ -79,8 +79,12 @@
     width: 100%;
     margin: auto;
 
-    @media (min-width: 1000px) {
-        width: 84%;
+    @media (min-width: 1024px) {
+        width: 88%;
+    }
+
+    @media (min-width:1440px) {
+        width: 95%;
     }
 }
 
@@ -138,6 +142,8 @@
             }
 
             &:focus {
+                outline: none;
+
                 &:after {
                     height: 3px;
                     background-color: $soft-red;
@@ -211,6 +217,11 @@
     width: 100%;
     max-width: rem(580);
     margin: $space-xxl auto;
+    border-top: thin solid rgba(0, 0, 0, 0.12);
+
+    li {
+        border-bottom: thin solid rgba(0, 0, 0, 0.12);
+    }
 
     &__header {
         margin: 0;
@@ -231,6 +242,10 @@
         &:hover {
             color: $soft-red;
         }
+    }
+
+    &__body {
+        padding: $space-xl 0;
     }
 }
 
@@ -266,7 +281,7 @@
 
         input {
             width: 100%;
-            max-width: rem(375);
+            max-width: rem(320);
             margin: $space-s auto;
             flex: 0 1 auto;
         }
@@ -277,7 +292,7 @@
             }
 
             input[type=submit] {
-                width: rem(100);
+                width: auto;
             }
         }
     }

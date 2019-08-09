@@ -54,9 +54,18 @@ th {
     text-align: left;
 }
 
+%focus {
+    outline: 2px dotted $soft-blue;
+    outline-offset: 3px;
+}
+
 a {
     display: inline-block;
     text-decoration: none;
+
+    &:focus {
+        @extend %focus;
+    }
 }
 
 fieldset,
