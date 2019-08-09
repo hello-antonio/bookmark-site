@@ -58,3 +58,11 @@ a {
     display: inline-block;
     text-decoration: none;
 }
+
+fieldset,
+label,
+input {
+    border: transparent;
+    padding: $space-m;
+    border-radius: 4px;
+}

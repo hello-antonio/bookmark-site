@@ -5,11 +5,17 @@ h3 {
     margin: 0 0 1.5rem;
     font-weight: $medium;
     color: $very-dark-blue;
+    line-height: 1.25;
+}
+
+h2 {
+    font-size: rem(32/1.5);
 }
 
 h3 {
     font-weight: $regular;
 }
+
 
 p,
 h4 {
@@ -25,6 +31,12 @@ p {
 
 small {
     font-size: rem(16);
+}
+
+.overline {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: rem(12);
 }
 
 @media (min-width:700px) {

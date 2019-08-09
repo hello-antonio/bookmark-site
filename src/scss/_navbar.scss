@@ -10,12 +10,12 @@
         }
 
         a:not(.btn) {
-            padding: 0.5rem 0;
+            padding: $space-s 0;
             color: $soft-blue;
         }
 
         a.btn {
-            padding: 0.5rem 0.75rem;
+            padding: $space-s $space-m;
         }
 
         .icon {
@@ -25,14 +25,14 @@
         }
 
         li {
-            margin: 0.5rem 0;
+            margin: $space-s 0;
         }
 
         li ul li {
             display: inline-block;
 
             &:first-child {
-                margin: 0 1rem 0 0;
+                margin: 0 $space-l 0 0;
             }
         }
     }
@@ -50,12 +50,12 @@
 
         &__menu {
             a {
-                font-size: 0.75rem;
+                font-size: $space-m;
             }
 
             li {
                 display: inline-block;
-                margin: 0 3rem 0 0;
+                margin: 0 $space-xxl 0 0;
 
                 &:first-child {
                     margin-left: 0;
@@ -116,8 +116,8 @@
                 position: absolute;
                 left: 0;
                 right: 0;
-                margin: 1.5rem 0;
-                padding: 1.5rem 8%;
+                margin: $space-xl 0;
+                padding: $space-xl 8%;
                 width: 100%;
                 transform: translateY(-200%);
                 background-color: $very-dark-blue;
@@ -127,7 +127,7 @@
                 a {
                     width: 100%;
                     color: #fff;
-                    padding: 0.75rem;
+                    padding: $space-m;
                 }
 
                 .icon {
@@ -136,5 +136,28 @@
                 }
             }
         }
+    }
+}
+
+// Screen reader visible.
+.sr-visible {
+    border: 0;
+    clip: rect(1px 1px 1px 1px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+
+    // And visually to sighted users.
+    &.sr-focusable:focus,
+    &.sr-focusable:active {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
     }
 }

@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="./scss/main.scss">
     <style>
         .attribution {
+            width: 100%;
+            margin: auto;
             font-size: 11px;
             text-align: center;
         }
@@ -32,6 +34,7 @@
 
 <body>
     <header>
+        <a href="#maincontent" class="btn sr-visible sr-focusable">Skip to Content</a>
         <nav class="container navbar" role="navigation">
             <div class="navbar__title">
                 <svg class="icon logo-bookmark">
@@ -81,12 +84,14 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main id="maincontent">
         <div class="container">
             <!-- HOME -->
-            <section id="homepage">
-                <img src="./images/illustration-hero.svg" alt="illustration-hero" aria-hidden="true">
-                <div>
+            <section id="homepage" class="hero">
+                <div class="hero__img image-bg">
+                    <img src="./images/illustration-hero.svg" alt="illustration-hero" aria-hidden="true">
+                </div>
+                <div class="hero__header">
                     <h1>
                         A Simple Bookmark Manager
                     </h1>
@@ -130,8 +135,10 @@
                         </button>
                     </div>
                     <!-- Tabs Content -->
-                    <div class="tabs__content">
-                        <img src="./images/illustration-features-tab-1.svg" alt="tab1" aria-hidden="true">
+                    <div class="tabs__content" tabindex="0">
+                        <div class="tabs__img">
+                            <img src="./images/illustration-features-tab-1.svg" alt="tab1" aria-hidden="true">
+                        </div>
                         <div>
                             <h2>
                                 Bookmark in one click
@@ -140,11 +147,13 @@
                                 Organize your bookmarks however you like. Our simple drag-and-drop interface
                                 gives you complete control over how you manage your favourite sites.
                             </p>
-                            <a href="" class="btn">More Info</a>
+                            <a href="" class="btn" aria-label="More Info about Simple Bookmarking">More Info</a>
                         </div>
                     </div>
-                    <div class="tabs__content">
-                        <img src="./images/illustration-features-tab-2.svg" alt="tab2" aria-hidden="true">
+                    <div class="tabs__content" tabindex="0">
+                        <div class="tabs__img">
+                            <img src="./images/illustration-features-tab-2.svg" alt="tab2" aria-hidden="true">
+                        </div>
                         <div>
                             <h2>
                                 Intelligent search
@@ -154,11 +163,13 @@
                                 Our powerful search feature will help you find saved sites in no time at all.
                                 No need to trawl through all of your bookmarks.
                             </p>
-                            <a href="" class="btn">More Info</a>
+                            <a href="" class="btn" aria-label="More Info about Speedy search">More Info</a>
                         </div>
                     </div>
-                    <div class="tabs__content">
-                        <img src="./images/illustration-features-tab-3.svg" alt="tab3" aria-hidden="true">
+                    <div class="tabs__content" tabindex="0">
+                        <div class="tabs__img">
+                            <img src="./images/illustration-features-tab-3.svg" alt="tab3" aria-hidden="true">
+                        </div>
                         <div>
                             <h2>
                                 Share your bookmarks
@@ -167,7 +178,7 @@
                                 Easily share your bookmarks and collections with others. Create a shareable
                                 link that you can send at the click of a button.
                             </p>
-                            <a href="" class="btn">More Info</a>
+                            <a href="" class="btn" aria-label="More Info about Easy Sharing">More Info</a>
                         </div>
                     </div>
                 </div>
@@ -196,7 +207,7 @@
                         </div>
                         <img src="./images/bg-dots.svg" alt="bg" aria-hidden="true">
                         <div class="card__info">
-                            <a href="" class="btn">Add & Install Extension</a>
+                            <a href="" class="btn" aria-label="Add & install Chrome extension">Add & Install Extension</a>
                         </div>
                     </li>
                     <li class="card">
@@ -210,7 +221,7 @@
                         </div>
                         <img src="./images/bg-dots.svg" alt="bg" aria-hidden="true">
                         <div class="card__info">
-                            <a href="" class="btn">Add & Install Extension</a>
+                            <a href="" class="btn" aria-label="Add & install Firefox extension">Add & Install Extension</a>
                         </div>
                     </li>
                     <li class="card">
@@ -224,7 +235,7 @@
                         </div>
                         <img src="./images/bg-dots.svg" alt="bg" aria-hidden="true">
                         <div class="card__info">
-                            <a href="" class="btn">Add & Install Extension</a>
+                            <a href="" class="btn" aria-label="Add & install Opera extension">Add & Install Extension</a>
                         </div>
                     </li>
                 </ul>
@@ -329,7 +340,7 @@
                             </div>
                         </li>
                     </ul>
-                    <a href="#" class="btn">
+                    <a href="#" class="btn" aria-label="More info about frequently ask questions.">
                         More Info
                     </a>
                 </div>
@@ -342,7 +353,7 @@
             <form class="cta__form">
                 <fieldset>
                     <legend>
-                        <span>
+                        <span class="overline">
                             35,000+ already joined
                         </span>
                         <h2>
@@ -351,7 +362,7 @@
                     </legend>
 
                     <div class="cta__group">
-                        <label for="email">
+                        <label for="email" class="sr-visible">
                             Email
                         </label>
                         <input type="email" id="email" placeholder="Enter your email">
@@ -365,14 +376,14 @@
     <footer class="footer">
         <div class="container">
 
-            <ul class="links">
+            <ul class="links list">
                 <li><a href="#homepage" aria-label="Bookmark">
                         <svg class="icon logo-bookmark-footer">
                             <use xlink:href="#logo-bookmark"></use>
                         </svg>
                     </a></li>
                 <li>
-                    <ul>
+                    <ul class="list">
                         <li><a href="#">
                                 Features
                             </a></li>
@@ -385,7 +396,7 @@
                     </ul>
                 </li>
                 <li>
-                    <ul>
+                    <ul class="list list--inline">
                         <li>
                             <a role="menuitem" href="#" aria-label="Facebook">
                                 <svg class="icon icon-facebook">
@@ -403,11 +414,11 @@
                     </ul>
                 </li>
             </ul>
+            <p class="attribution">
+                Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+                Coded by <a href="#">thecalicoder</a>.
+            </p>
         </div>
-        <p class="attribution">
-            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-            Coded by <a href="#">Your Name Here</a>.
-        </p>
     </footer>
 
     <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1"
