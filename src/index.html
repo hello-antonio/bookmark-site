@@ -35,14 +35,16 @@
 <body>
     <header>
         <a href="#maincontent" class="btn sr-visible sr-focusable">Skip to Content</a>
-        <nav class="container navbar" role="navigation">
+        <nav class="container navbar" id="js-navbar" role="navigation">
             <div class="navbar__title">
                 <svg class="icon logo-bookmark">
+                    <use xlink:href="#logo-bookmark"></use>
+                </svg> <svg class="icon logo-bookmark-white">
                     <use xlink:href="#logo-bookmark"></use>
                 </svg>
             </div>
             <div class="navbar__toggle">
-                <button aria-label="Open Menu">
+                <button aria-label="Open Menu" id="js-toggle-btn">
                     <svg class="icon">
                         <use xlink:href="#icon-hamburger" class="icon__hamburger"></use>
                         <use xlink:href="#icon-close" class="icon__close"></use>
@@ -50,14 +52,14 @@
                 </button>
             </div>
             <!-- MENU -->
-            <ul class="navbar__menu links" role="menu">
-                <li role="none"><a role="menuitem" href="#">
+            <ul class="navbar__menu links" role="menu" id="js-menu">
+                <li role="none" class="navbar__link"><a role="menuitem" href="#">
                         Features
                     </a></li>
-                <li role="none"><a role="menuitem" href="#">
+                <li role="none" class="navbar__link"><a role="menuitem" href="#">
                         Pricing
                     </a></li>
-                <li role="none"><a role="menuitem" href="#">
+                <li role="none" class="navbar__link"><a role="menuitem" href="#">
                         Contact
                     </a></li>
                 <li role="none"><a class="btn btn--secondary" role="menuitem" href="#">
@@ -147,7 +149,8 @@
                                 Organize your bookmarks however you like. Our simple drag-and-drop interface
                                 gives you complete control over how you manage your favourite sites.
                             </p>
-                            <a href="" class="btn btn--primary" aria-label="More Info about Simple Bookmarking">More Info</a>
+                            <a href="" class="btn btn--primary" aria-label="More Info about Simple Bookmarking">More
+                                Info</a>
                         </div>
                     </div>
                     <div class="tabs__content" tabindex="0">
@@ -207,7 +210,8 @@
                         </div>
                         <img src="./images/bg-dots.svg" alt="bg" aria-hidden="true">
                         <div class="card__info">
-                            <a href="" class="btn btn--primary" aria-label="Add & install Chrome extension">Add & Install Extension</a>
+                            <a href="" class="btn btn--primary" aria-label="Add & install Chrome extension">Add &
+                                Install Extension</a>
                         </div>
                     </li>
                     <li class="card">
@@ -221,7 +225,8 @@
                         </div>
                         <img src="./images/bg-dots.svg" alt="bg" aria-hidden="true">
                         <div class="card__info">
-                            <a href="" class="btn btn--primary" aria-label="Add & install Firefox extension">Add & Install Extension</a>
+                            <a href="" class="btn btn--primary" aria-label="Add & install Firefox extension">Add &
+                                Install Extension</a>
                         </div>
                     </li>
                     <li class="card">
@@ -235,7 +240,8 @@
                         </div>
                         <img src="./images/bg-dots.svg" alt="bg" aria-hidden="true">
                         <div class="card__info">
-                            <a href="" class="btn btn--primary" aria-label="Add & install Opera extension">Add & Install Extension</a>
+                            <a href="" class="btn btn--primary" aria-label="Add & install Opera extension">Add & Install
+                                Extension</a>
                         </div>
                     </li>
                 </ul>
@@ -340,8 +346,9 @@
                             </div>
                         </li>
                     </ul>
-                    <div>                    
-                        <a href="#" class="btn btn--primary btn--center" aria-label="More info about frequently ask questions.">
+                    <div>
+                        <a href="#" class="btn btn--primary btn--center"
+                            aria-label="More info about frequently ask questions.">
                             More Info
                         </a>
                     </div>
@@ -377,15 +384,15 @@
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
-
             <ul class="links list">
-                <li><a href="#homepage" aria-label="Bookmark">
-                        <svg class="icon logo-bookmark-footer">
-                            <use xlink:href="#logo-bookmark"></use>
-                        </svg>
-                    </a></li>
                 <li>
                     <ul class="list">
+                        <li><a href="#homepage" aria-label="Bookmark">
+                                <svg class="icon logo-bookmark-footer">
+                                    <use xlink:href="#logo-bookmark"></use>
+                                </svg>
+                            </a>
+                        </li>
                         <li><a href="#">
                                 Features
                             </a></li>

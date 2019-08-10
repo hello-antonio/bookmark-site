@@ -1,5 +1,15 @@
 // _navbar.scss
 .navbar {
+    &__title {
+        .logo-bookmark {
+            display: inline-block;
+        }
+
+        .logo-bookmark-white {
+            display: none;
+        }
+    }
+
     &__toggle {
         display: none;
     }
@@ -81,7 +91,7 @@
 
 }
 
-// js 
+// js enable
 .js {
 
     @media (max-width: 767px) {
@@ -92,6 +102,8 @@
             &__toggle {
                 display: inline-block;
                 width: 49%;
+                position: relative;
+                z-index: 99;
             }
 
             &__toggle {
@@ -120,9 +132,11 @@
                 padding: $space-xl 8%;
                 width: 100%;
                 transform: translateY(-200%);
-                background-color: $very-dark-blue;
+                background-color: rgba($very-dark-blue, 0.9);
                 text-align: center;
                 transition: transform 500ms ease-in-out;
+                z-index: 88;
+                backface-visibility: hidden;
 
                 a {
                     width: 100%;
@@ -130,10 +144,60 @@
                     padding: $space-m;
                 }
 
+                a.btn {
+                    margin: $space-xl 0 $space-xxl;
+                    border-color: $light-gray;
+                    background-color: transparent;
+                }
+
                 .icon {
                     font-size: 1.5rem;
                     --color3: #{$soft-red}
                 }
+            }
+
+            &__link {
+                border-bottom: thin solid rgba($light-gray, 0.25);
+
+                &:first-child {
+                    border-top: thin solid rgba($light-gray, 0.25);
+                }
+            }
+
+        }
+    }
+}
+
+// Toggle menu
+.js-toggle-menu {
+
+    @media (max-width:767px) {
+        background-color: rgba($very-dark-blue, 0.9);
+        transition: background 500ms ease-in-out;
+
+        .navbar {
+            &__title {
+                .logo-bookmark {
+                    display: none;
+                }
+
+                .logo-bookmark-white {
+                    display: inline-block;
+                }
+            }
+
+            &__toggle {
+                .icon__hamburger {
+                    opacity: 0;
+                }
+
+                .icon__close {
+                    opacity: 1;
+                }
+            }
+
+            &__menu {
+                transform: translateY(-1px);
             }
         }
     }

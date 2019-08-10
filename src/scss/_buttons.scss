@@ -7,7 +7,7 @@
     transition: all 250ms ease;
 
     &:hover {
-        box-shadow: 0 4px 12px rgba(#000, 0.16);
+        box-shadow: 0 4px 12px rgba(#000, 0.20);
         @content;
     }
 }

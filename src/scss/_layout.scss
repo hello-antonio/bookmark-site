@@ -1,15 +1,15 @@
 // _layouts.scss
 .container {
     width: 84%;
-    max-width: 1116px;
+    max-width: rem($max-width);
     margin: auto;
-    padding: 1.5rem 0;
+    padding: $space-xl 0;
 }
 
 main section {
-    padding: 1.5rem 0;
+    padding: $space-xxl 0;
 }
 
 section img {
-    margin: 0 0 1.5rem;
+    margin: 0 0 $space-xl;
 }
