@@ -1,12 +1,16 @@
 // _navbar.scss
 .navbar {
     &__title {
+        .icon {
+            transition: opacity 400ms ease 10ms;
+        }
+
         .logo-bookmark {
-            display: inline-block;
+            opacity: 1;
         }
 
         .logo-bookmark-white {
-            display: none;
+            opacity: 0;
         }
     }
 
@@ -92,11 +96,34 @@
 }
 
 // js enable
+@mixin nav-toggle($state) {
+    @if $state=="open" {
+        visibility: visible;
+        opacity: 1;
+        z-index: 88;
+        pointer-events: visible;
+    }
+
+    @else if $state=="close" {
+        visibility: hidden;
+        opacity: 0;
+        z-index: -88;
+        pointer-events: none;
+    }
+
+    transition: opacity 500ms ease-in-out 100ms;
+}
+
+$nav-height: rem(90);
+
 .js {
 
     @media (max-width: 767px) {
         .navbar {
-            min-height: 70px;
+            height: $nav-height;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
 
             &__title,
             &__toggle {
@@ -104,6 +131,7 @@
                 width: 49%;
                 position: relative;
                 z-index: 99;
+                height: rem(48);
             }
 
             &__toggle {
@@ -113,6 +141,9 @@
                     border: none;
                     background-color: transparent;
                     vertical-align: middle;
+                    width: rem(48);
+                    height: rem(48);
+                    text-align: right;
                 }
 
                 .icon__hamburger {
@@ -126,17 +157,17 @@
 
             &__menu {
                 position: absolute;
+                top: 0;
                 left: 0;
                 right: 0;
-                margin: $space-xl 0;
-                padding: $space-xl 8%;
+                padding: $nav-height 8% 0;
                 width: 100%;
-                transform: translateY(-200%);
+                height: 100vh;
                 background-color: rgba($very-dark-blue, 0.9);
                 text-align: center;
-                transition: transform 500ms ease-in-out;
-                z-index: 88;
                 backface-visibility: hidden;
+
+                @include nav-toggle("close");
 
                 a {
                     width: 100%;
@@ -153,6 +184,10 @@
                 .icon {
                     font-size: 1.5rem;
                     --color3: #{$soft-red}
+                }
+
+                &>li:last-child {
+                    margin-top: 25%;
                 }
             }
 
@@ -172,17 +207,16 @@
 .js-toggle-menu {
 
     @media (max-width:767px) {
-        background-color: rgba($very-dark-blue, 0.9);
-        transition: background 500ms ease-in-out;
+        transition: background 500ms ease-in-out 100ms;
 
         .navbar {
             &__title {
                 .logo-bookmark {
-                    display: none;
+                    opacity: 0;
                 }
 
                 .logo-bookmark-white {
-                    display: inline-block;
+                    opacity: 1;
                 }
             }
 
@@ -197,7 +231,7 @@
             }
 
             &__menu {
-                transform: translateY(-1px);
+                @include nav-toggle("open");
             }
         }
     }

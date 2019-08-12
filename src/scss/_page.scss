@@ -197,6 +197,10 @@
     margin: 0 0 $space-xxl;
     position: relative;
 
+    h2 {
+      margin: $space-m 0 $space-xl;
+    }
+
     >* {
       display: inline-block;
       width: 100%;

@@ -52,3 +52,18 @@
 .icon-arrow {
     width: 1.5rem;
 }
+
+.icons-stack {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    line-height: rem(48);
+    height: rem(48);
+    width: 100%;
+
+    i {
+        position: absolute;
+        left: 0;
+        width: 100%;
+    }
+}
