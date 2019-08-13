@@ -78,10 +78,11 @@
   justify-content: space-between;
   flex-flow: row wrap;
   width: 100%;
-  margin: auto;
+  margin: 0 auto;
 
   @media (min-width: 1024px) {
     width: 88%;
+    margin: 0 auto $space-xxl;
   }
 
   @media (min-width: 1440px) {
@@ -284,10 +285,49 @@
     &:hover {
       color: $soft-red;
     }
+
+    .icon {
+      transform-origin: center;
+      transform: rotate(0deg);
+      transition: transform 250ms ease 10ms;
+    }
+
+    &.js-active-accordion .icon {
+      transform: rotate(180deg);
+      --color2: #{$soft-red};
+    }
   }
+
 
   &__body {
     padding: $space-xl 0;
+  }
+}
+
+.js {
+  .accordion {
+    overflow: hidden;
+
+    li {
+      position: relative;
+    }
+
+    &__body {
+      position: absolute;
+      opacity: 0;
+      transition: all 250ms ease-in-out 10ms;
+
+      &[aria-hidden=true] {
+        visibility: hidden;
+      }
+
+      &[aria-hidden=false] {
+        visibility: visible;
+        position: static;
+        opacity: 1;
+      }
+    }
+
   }
 }
 
