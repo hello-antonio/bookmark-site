@@ -122,6 +122,8 @@
 
 // Tabs
 .tabs {
+  position: relative;
+
   &__list {
     text-align: center;
     margin: $space-xxl 0;
@@ -130,12 +132,14 @@
     justify-content: center;
 
     button {
+      $transition: all 350ms ease 10ms;
       width: 100%;
       border: none;
       background-color: #fff;
       padding: $space-xl;
       font-size: rem(20);
       position: relative;
+      transition: $transition;
 
       &:after {
         content: "";
@@ -145,6 +149,7 @@
         bottom: 0;
         background-color: $grayish-blue;
         height: 1px;
+        transition: $transition;
       }
 
       &:hover {
@@ -222,7 +227,31 @@
 }
 
 .js {
-  .tabs {}
+  .tabs {
+    &__list {
+      button.js-active-tab {
+        &:after {
+          height: 3px;
+          background-color: $soft-red;
+        }
+      }
+    }
+
+    &__content {
+      opacity: 0;
+      height: 100%;
+      pointer-events: none;
+      z-index: -111;
+      display: none;
+
+      &.js-active-content {
+        pointer-events: visible;
+        opacity: 1;
+        z-index: 1;
+        display: flex;
+      }
+    }
+  }
 }
 
 // Accordion/FAQ
