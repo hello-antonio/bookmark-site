@@ -69,9 +69,10 @@ a {
 }
 
 fieldset,
-label,
 input {
+    min-height: rem(48);
     border: transparent;
-    padding: $space-m;
+    padding: $space-m $space-l;
     border-radius: 4px;
+    font-size: inherit;
 }

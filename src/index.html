@@ -370,7 +370,7 @@
     <!-- CTA -->
     <section id="cta" class="section cta">
         <div class="container">
-            <form class="cta__form">
+            <form class="cta__form" id="js-email-form">
                 <fieldset>
                     <legend>
                         <span class="overline">
@@ -382,11 +382,16 @@
                     </legend>
 
                     <div class="cta__group">
-                        <label for="email" class="sr-visible">
-                            Email
-                        </label>
-                        <input type="email" id="email" placeholder="Enter your email">
-                        <input type="submit" value="Contact Us" class="btn btn--secondary">
+                        <div class="cta__field">
+                            <label for="email" class="sr-visible" aria-label="Email">
+                            </label>
+                            <input type="email" id="email" placeholder="Enter your email address" maxlength="320" aria-invalid="true" aria-required="true">
+                            <div class="cta__help"></div>
+                        </div>
+                        <div class="cta__button">
+                            <input type="submit" value="Contact Us" class="btn btn--secondary">
+                        </div>
+                        <div class="cta__success"></div>
                     </div>
                 </fieldset>
             </form>
@@ -482,6 +487,12 @@
                 <path fill="none" stroke="#5267df" style="stroke: var(--color2, #5267df)" stroke-linejoin="miter"
                     stroke-linecap="butt" stroke-miterlimit="4" stroke-width="8"
                     d="M2.667 2.667l21.333 21.333 21.333-21.333"></path>
+            </symbol>
+            <symbol id="icon-exclamation-circle" viewBox="0 0 27 32">
+                <title>exclamation-circle</title>
+                <path
+                    d="M13.714 2.286c7.571 0 13.714 6.143 13.714 13.714s-6.143 13.714-13.714 13.714-13.714-6.143-13.714-13.714 6.143-13.714 13.714-13.714zM16 24.554v-3.393c0-0.321-0.25-0.589-0.554-0.589h-3.429c-0.321 0-0.589 0.268-0.589 0.589v3.393c0 0.321 0.268 0.589 0.589 0.589h3.429c0.304 0 0.554-0.268 0.554-0.589zM15.964 18.411l0.321-11.089c0-0.125-0.054-0.25-0.179-0.321-0.107-0.089-0.268-0.143-0.429-0.143h-3.929c-0.161 0-0.321 0.054-0.429 0.143-0.125 0.071-0.179 0.196-0.179 0.321l0.304 11.089c0 0.25 0.268 0.446 0.607 0.446h3.304c0.321 0 0.589-0.196 0.607-0.446z">
+                </path>
             </symbol>
         </defs>
     </svg>

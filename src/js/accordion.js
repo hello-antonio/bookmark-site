@@ -51,7 +51,6 @@ class Accordion extends ActivateAccordion {
       this.contents[index].setAttribute("aria-hidden", true);
     });
     this.targetId.classList.add(this.focusCls);
-    console.log(this);
   }
 }
 

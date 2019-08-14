@@ -354,6 +354,37 @@
     text-align: center;
   }
 
+  &__help {
+    position: relative;
+    padding: 0.25rem $space-s;
+    height: 0;
+    top: 0;
+    z-index: -1;
+    font-style: italic;
+    font-size: 0.75rem;
+    font-weight: $medium;
+    opacity: 0;
+    text-align: left;
+    transition: all 320ms ease-in 10ms;
+  }
+
+  &__success {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: $space-xl;
+    text-align: center;
+    font-weight: $medium;
+    background-color: $soft-blue;
+    color: #fff;
+    box-shadow: 0 4px 14px rgba($very-dark-blue, 0.1);
+    font-size: 1.25rem;
+    opacity: 0;
+    transition: all 500ms ease-in-out 100ms;
+    pointer-events: none;
+  }
+
   &__group {
     width: 100%;
     max-width: rem(500);
@@ -362,22 +393,61 @@
     justify-content: space-between;
     flex-flow: row wrap;
 
+  }
+
+  &__field,
+  &__button {
+    position: relative;
+    width: 100%;
+    max-width: rem(320);
+    margin: $space-s auto;
+    flex: 0 1 auto;
+    z-index: 1;
+
     input {
       width: 100%;
-      max-width: rem(320);
-      margin: $space-s auto;
-      flex: 0 1 auto;
-    }
 
-    @media (min-width: 768px) {
-      input {
-        width: rem(375);
-      }
-
-      input[type="submit"] {
-        width: auto;
+      &:focus {
+        outline: transparent;
       }
     }
+  }
+
+  @media (min-width: 768px) {
+    &__field {
+      width: rem(375);
+    }
+
+    &__button {
+      width: auto;
+    }
+  }
+}
+
+.valid {
+  border: transparent;
+}
+
+.invalid {
+  border: 3px solid $soft-red;
+  background-color: $soft-red;
+  border-radius: 4px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: $space-l;
+    top: $space-m;
+    bottom: 0;
+    background: url(../images/icon-error.svg) no-repeat left top;
+    padding: $space-s;
+    background-size: 1rem;
+    z-index: 1;
+  }
+
+  .cta__help {
+    height: auto;
+    opacity: 1;
   }
 }
 

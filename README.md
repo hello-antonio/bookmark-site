@@ -43,6 +43,30 @@ You will find all the required assets in the `/images` folder. The assets are al
 
 There is also a `style-guide.md` file, which contains the information you'll need, such as color palette and fonts.
 
+## Installation
+
+```
+npm install
+```
+
+#### Start
+
+```
+npm run start
+```
+
+#### Build
+
+```
+npm run build
+```
+
+#### Deploy to GitHub using Docs
+
+```
+npm run github:deploy
+```
+
 ## Building your project
 
 Practice using version control by creating your own GitHub repository for this challenge. This has the added benefit of being able to publish the site for free on GitHub Pages. Find out more about GitHub Pages here: [https://pages.github.com](https://pages.github.com).

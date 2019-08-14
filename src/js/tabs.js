@@ -156,7 +156,6 @@ class Tabs extends ActivateTab {
       "keydown",
       this.handleKeyboard.bind(this)
     );
-    console.log(this);
   }
 }
 

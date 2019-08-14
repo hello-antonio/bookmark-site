@@ -160,6 +160,7 @@ $nav-height: rem(90);
                 top: 0;
                 left: 0;
                 right: 0;
+                bottom: 0;
                 padding: $nav-height 8% 0;
                 width: 100%;
                 height: 100vh;
@@ -187,7 +188,10 @@ $nav-height: rem(90);
                 }
 
                 &>li:last-child {
-                    margin-top: 25%;
+                    position: absolute;
+                    bottom: $space-xxl;
+                    left: 0;
+                    right: 0;
                 }
             }
 
