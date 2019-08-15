@@ -20,6 +20,7 @@
     border-radius: 4px;
     text-align: center;
     font-size: rem(12);
+    font-weight: $medium;
 
     &:focus {
         @extend %focus;

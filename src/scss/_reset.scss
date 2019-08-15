@@ -29,7 +29,7 @@ body {
     'Open Sans',
     'Helvetica Neue',
     sans-serif;
-
+    background-color: #fff;
 }
 
 ol,
@@ -75,4 +75,9 @@ input {
     padding: $space-m $space-l;
     border-radius: 4px;
     font-size: inherit;
+}
+
+input[type=submit],
+input[type=button] {
+    font-weight: 600;
 }

@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Web Starter">
-    <title>Web Starter</title>
+    <meta name="description"
+        content="A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.">
+    <title>Bookmark</title>
     <script>
         (function () {
             document.getElementsByTagName("html")[0].classList.add("js")
@@ -16,44 +17,46 @@
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap" rel="preload" as="style"
         onload="this.rel = 'stylesheet'">
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap" rel="stylesheet">
-    <link rel="preload" as="style" onload="this.rel = 'stylesheet'" href="./scss/main.scss">
+    <link href="./scss/main.scss" rel="preload" as="style" onload="this.rel = 'stylesheet'">
     <link rel="stylesheet" href="./scss/main.scss">
     <style>
         .attribution {
             width: 100%;
-            margin: auto;
             font-size: 11px;
             text-align: center;
+            margin: 0 auto;
         }
 
         .attribution a {
-            color: hsl(228, 45%, 44%);
+            color: #ffffff;
         }
     </style>
 </head>
 
 <body>
     <header>
-        <a href="#maincontent" class="btn sr-visible sr-focusable">Skip to Content</a>
         <nav class="container navbar" id="js-navbar" role="navigation">
+            <a href="#maincontent" class="btn sr-visible sr-focusable">Skip to Content</a>
             <div class="navbar__title">
                 <div class="icons-stack">
                     <i>
-                        <svg class="icon logo-bookmark">
-                            <use xlink:href="#logo-bookmark"></use>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            class="icon logo-bookmark">
+                            <use xlink:href="#logo-bookmark" href="#logo-bookmark"></use>
                         </svg>
                     </i>
                     <i>
-                        <svg class="icon logo-bookmark-white">
-                            <use xlink:href="#logo-bookmark"></use>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            class="icon logo-bookmark-white">
+                            <use xlink:href="#logo-bookmark" href="#logo-bookmark"></use>
                         </svg>
                     </i>
                 </div>
             </div>
             <div class="navbar__toggle">
-                <button aria-label="Open Menu" id="js-toggle-btn">
-                    <svg class="icon">
-                        <use xlink:href="#icon-hamburger" class="icon__hamburger"></use>
+                <button aria-label="Open Menu" aria-controls="js-menu" aria-expanded="false" id="js-toggle-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="icon">
+                        <use xlink:href="#icon-hamburger" href="#icon-hamburger" class="icon__hamburger"></use>
                         <use xlink:href="#icon-close" class="icon__close"></use>
                     </svg>
                 </button>
@@ -76,15 +79,17 @@
                     <ul>
                         <li>
                             <a role="menuitem" href="#" aria-label="Facebook">
-                                <svg class="icon icon-facebook">
-                                    <use xlink:href="#icon-facebook"></use>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    class="icon icon-facebook">
+                                    <use xlink:href="#icon-facebook" href="#icon-facebook"></use>
                                 </svg>
                             </a>
                         </li>
                         <li>
                             <a role="menuitem" href="#" aria-label="Twitter">
-                                <svg class="icon icon-twitter">
-                                    <use xlink:href="#icon-twitter"></use>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    class="icon icon-twitter">
+                                    <use xlink:href="#icon-twitter" href="#icon-twitter"></use>
                                 </svg>
                             </a>
                         </li>
@@ -132,7 +137,7 @@
 
                 <div class="tabs" id="js-tabs">
                     <!-- Tabs list -->
-                    <div class="tabs__list">
+                    <div class="tabs__list" role="tablist">
                         <button>
                             Simple Bookmarking
                         </button>
@@ -279,8 +284,9 @@
                                         What is Bookmark?
                                     </span>
                                     <span>
-                                        <svg class="icon">
-                                            <use xlink:href="#icon-arrow"></use>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" class="icon">
+                                            <use xlink:href="#icon-arrow" href="#icon-arrow"></use>
                                         </svg></span>
                                 </button>
                             </h3>
@@ -297,8 +303,9 @@
                                 <button class="accordion__button" aria-expanded="true">
                                     <span> How can I request a new browser?</span>
                                     <span>
-                                        <svg class="icon">
-                                            <use xlink:href="#icon-arrow"></use>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" class="icon">
+                                            <use xlink:href="#icon-arrow" href="#icon-arrow"></use>
                                         </svg></span>
                                 </button>
                             </h3>
@@ -321,8 +328,9 @@
                                         <!-- Question 3 -->
                                         Is there a mobile app?</span>
                                     <span>
-                                        <svg class="icon">
-                                            <use xlink:href="#icon-arrow"></use>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" class="icon">
+                                            <use xlink:href="#icon-arrow" href="#icon-arrow"></use>
                                         </svg></span>
                                 </button>
                             </h3>
@@ -343,8 +351,9 @@
                                         <!-- Question 4 -->
                                         What about other Chromium browsers?</span>
                                     <span>
-                                        <svg class="icon">
-                                            <use xlink:href="#icon-arrow"></use>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" class="icon">
+                                            <use xlink:href="#icon-arrow" href="#icon-arrow"></use>
                                         </svg></span>
                                 </button>
                             </h3>
@@ -372,20 +381,21 @@
         <div class="container">
             <form class="cta__form" id="js-email-form">
                 <fieldset>
-                    <legend>
-                        <span class="overline">
+                    <legend tabindex="0">
+                        <div class="overline">
                             35,000+ already joined
-                        </span>
+                        </div>
                         <h2>
                             Stay up-to-date with what we’re doing
                         </h2>
                     </legend>
-
                     <div class="cta__group">
                         <div class="cta__field">
                             <label for="email" class="sr-visible" aria-label="Email">
+                                Email
                             </label>
-                            <input type="email" id="email" placeholder="Enter your email address" maxlength="320" aria-invalid="true" aria-required="true">
+                            <input type="email" id="email" placeholder="Enter your email address" maxlength="320"
+                                aria-invalid="true" aria-required="true">
                             <div class="cta__help"></div>
                         </div>
                         <div class="cta__button">
@@ -398,14 +408,15 @@
         </div>
     </section>
     <!-- FOOTER -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
-            <ul class="links list">
+            <ul class="links list" role="menu">
                 <li>
                     <ul class="list">
                         <li><a href="#homepage" aria-label="Bookmark">
-                                <svg class="icon logo-bookmark-footer">
-                                    <use xlink:href="#logo-bookmark"></use>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    class="icon logo-bookmark-footer">
+                                    <use xlink:href="#logo-bookmark" href="#logo-bookmark"></use>
                                 </svg>
                             </a>
                         </li>
@@ -424,15 +435,17 @@
                     <ul class="list list--inline">
                         <li>
                             <a role="menuitem" href="#" aria-label="Facebook">
-                                <svg class="icon icon-facebook">
-                                    <use xlink:href="#icon-facebook"></use>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    class="icon icon-facebook">
+                                    <use xlink:href="#icon-facebook" href="#icon-facebook"></use>
                                 </svg>
                             </a>
                         </li>
                         <li>
                             <a role="menuitem" href="#" aria-label="Twitter">
-                                <svg class="icon icon-twitter">
-                                    <use xlink:href="#icon-twitter"></use>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    class="icon icon-twitter">
+                                    <use xlink:href="#icon-twitter" href="#icon-twitter"></use>
                                 </svg>
                             </a>
                         </li>
@@ -441,13 +454,13 @@
             </ul>
             <p class="attribution">
                 Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-                Coded by <a href="#">thecalicoder</a>.
+                Coded by <a href="https://github.com/thecalicoder">thecalicoder</a>.
             </p>
         </div>
     </footer>
 
-    <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1"
-        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+        style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1">
         <defs>
             <symbol id="logo-bookmark" viewBox="0 0 189 32">
                 <title>logo-bookmark</title>
@@ -496,8 +509,8 @@
             </symbol>
         </defs>
     </svg>
-
-    <script src="./js/app.js"></script>
+    <!-- JS -->
+    <script src="./js/app.js" defer></script>
 </body>
 
 </html>

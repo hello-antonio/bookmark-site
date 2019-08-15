@@ -61,7 +61,7 @@ npm run start
 npm run build
 ```
 
-#### Deploy to GitHub using Docs
+#### Deploy to GitHub using Docs folder
 
 ```
 npm run github:deploy
