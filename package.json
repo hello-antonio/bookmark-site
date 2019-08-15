@@ -16,7 +16,7 @@
         "start": "parcel src/index.html --open",
         "build": "parcel build src/index.html --public-url ./",
         "watch": "parcel watch src/index.html",
-        "github:deploy": "npm run build && cp -r 'dist' docs && git add . && git commit -a -m 'latest build' && git push origin master"
+        "github:deploy": "npm run build && cp -r dist/* docs/ && git add . && git commit -a -m 'latest build' && git push origin master"
     },
     "devDependencies": {
         "autoprefixer": "^9.4.9",
