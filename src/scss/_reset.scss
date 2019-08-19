@@ -68,6 +68,13 @@ a {
     }
 }
 
+input,
+select,
+textarea {
+    appearance: none;
+    border-radius: none;
+}
+
 fieldset,
 input {
     min-height: rem(48);

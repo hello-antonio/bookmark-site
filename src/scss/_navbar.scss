@@ -32,9 +32,7 @@
             padding: $space-s $space-m;
         }
 
-        .icon {
-            width: 1.5rem;
-            height: 1.5rem;
+        .icon__hamburger {
             --color3: #{$soft-blue};
         }
 
@@ -138,6 +136,7 @@ $nav-height: rem(90);
                 text-align: right;
 
                 button {
+                    outline: none;
                     border: none;
                     background-color: transparent;
                     vertical-align: middle;
@@ -257,9 +256,12 @@ $nav-height: rem(90);
     &.sr-focusable:active {
         clip: auto;
         height: auto;
-        margin: 0;
+        margin: auto;
         overflow: visible;
-        position: static;
-        width: auto;
+        position: fixed;
+        width: rem(320);
+        left: 0;
+        right: 0;
+        top: 0;
     }
 }

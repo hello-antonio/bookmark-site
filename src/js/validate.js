@@ -54,6 +54,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   emailForm.addEventListener("submit", function(e) {
     e.preventDefault();
     let email = e.target.elements.email;
+
     if (isValid(email)) {
       email.nextElementSibling.textContent = ``;
       email.nextElementSibling.removeAttribute("role");
@@ -68,7 +69,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       }, 5000);
       email.value = "";
     } else {
-      email.nextElementSibling.textContent = `Whoops, make sure it's an email.`;
+      let err = `Whoops, make sure it's an email.`;
+      email.nextElementSibling.textContent = err;
+      email.setCustomValidity(err);
       email.nextElementSibling.setAttribute("role", "alert");
       email.setAttribute("aria-invalid", true);
       email.focus();

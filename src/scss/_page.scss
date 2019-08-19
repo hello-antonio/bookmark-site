@@ -374,9 +374,9 @@
     padding: $space-xl;
     text-align: center;
     font-weight: $medium;
-    background-color: $soft-blue;
+    background-color: $soft-red;
     color: #fff;
-    box-shadow: 0 4px 14px rgba($very-dark-blue, 0.1);
+    box-shadow: 0 4px 14px rgba($soft-red, 0.1);
     font-size: 1.25rem;
     opacity: 0;
     transition: all 500ms ease-in-out 100ms;
@@ -408,6 +408,12 @@
       &:focus {
         outline: transparent;
       }
+    }
+  }
+
+  &__field {
+    input:focus {
+      box-shadow: 0 4px 14px rgba($very-dark-blue, 0.26);
     }
   }
 
