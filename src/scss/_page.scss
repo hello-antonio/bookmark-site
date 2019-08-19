@@ -337,11 +337,11 @@
 
   h2 {
     color: inherit;
-    margin: $space-xl 0;
+    margin: $space-s 0;
   }
 
   legend {
-    width: 80%;
+    width: 100%;
     margin: auto;
   }
 
@@ -418,6 +418,10 @@
   }
 
   @media (min-width: 768px) {
+    legend {
+      width: 80%;
+    }
+
     &__field {
       width: rem(375);
     }
